@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/v_main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/v_main_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/v_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_dp_50"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/v_main_home"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_selector_home"
+            android:text="首页"
+            android:textColor="@drawable/home_bottom_text" />
+
+        <RadioButton
+            android:id="@+id/v_main_search"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_selector_search"
+            android:text="综合查询"
+            android:textColor="@drawable/home_bottom_text" />
+
+        <RadioButton
+            android:id="@+id/v_main_mine"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_selector_mine"
+            android:text="我的"
+            android:textColor="@drawable/home_bottom_text" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
